@@ -1,15 +1,14 @@
 //Step 2
-class Employee {
+class Employee{
     constructor(name, department) {
         this.name = name;
         this.department = department;
     }
 
-}
-describe () 
+describe () { 
     return `${this.name} works in ${this.department}`;
-    
-
+}
+}
 
 //Step 3
 class Manager extends Employee {
@@ -25,7 +24,7 @@ class Manager extends Employee {
 //Step 4
 const emp1 = new Employee ("Ashley Andrews", "HR");
 const emp2 = new Employee ("Martin John", "Finance");
-const mgr1 = new Manager ("John Smith", "Mrketing", "20");
+const mgr1 = new Manager ("John Smith", "Marketing", "20");
 const mgr2 = new Manager ("Cameron William", "IT", "12");
 
 console.log(emp1.describe());
@@ -38,14 +37,21 @@ class Company {
     constructor(){
         this.employees = [];
     }
+    
     addEmployee(employee){
-        this.employee.push(employee);
+        this.employees.push(employee);
     }
     listEmployees(){
-        this.employee.forEach(emp=> {
+        this.employees.forEach(emp=> {
             console.log(emp.describe());
         });
-    }
-}
+    }}
 
+//Step 6
+const company = new Company();
+company.addEmployee(emp1);
+company.addEmployee(emp2);
+company.addEmployee(mgr1);
+company.addEmployee(mgr2);
+company.listEmployees();
 
